@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>深州蜜桃的介绍</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    #app {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      background-image: url(../20240118/images/header-bg.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+
+    h1 {
+      margin: 0;
+      animation: fadeInDown 1s;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url(../20240118/images/main-bg.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+
+    .content {
+      max-width: 1000px;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.7);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      animation: fadeInUp 1s;
+    }
+
+    p{
+      text-indent: 35px;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    .content img {
+      float: left;
+      margin-right: 20px;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+    .logo {
+      position: fixed;
+      bottom: 0;
+      right: 20px;
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translate3d(0, 50%, 0);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <header>
+      <h1>深州蜜桃</h1>
+    </header>
+    <main>
+      <div class="content">
+        <img src="../20240118/images/peach.jpg" alt="深州蜜桃" style="width: auto;height: 400px;">
+        <h2>关于深州蜜桃</h2>
+        <p>深州蜜桃具有2000多年的种植历史，是我国历朝历代的皇宫贡品，被王光英评为：“深州蜜桃 果中之王”</p>
+        <p>深州蜜桃是河北省深州市特产，中国国家地理标志性产品，深州蜜桃，个头硕大，果型秀美，皮薄肉细，汁甜含腻，有红蜜和白蜜两个品系，又称魁蜜、冷桃，果实呈长圆形，果顶突出有尖，缝合线深，两边对称，柄短。梗洼深，果色鲜艳，向阳面有红霞，果肉乳白色或淡黄色，近核处有紫红色射线。成熟期在八月中旬至九月上旬。深州蜜桃有大桃、小桃之分。平常所说的深州蜜桃系指大桃而言，小桃称为桃奴。桃奴单果量50克左右，最大一百克左右，含糖量在20%以上，所以口味极甜，成熟期比大桃晚15天左右。2014年10月8日，国家质检总局正式批准深州蜜桃为原产地域保护产品。</p>
+      </div>
+    </main>
+
+    <footer>
+      <div class="logo"><img src="./images/logo.png" style="width: auto;height: 50px;"></div>
+      <p>&copy; 2024 农味甄选.</p>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+    });
+  </script>
+</body>
+
+</html>

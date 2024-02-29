@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>蔚州贡米的介绍</title>
+  <link href="css/css.css" rel="stylesheet" type="text/css" />
+  <link href="css/common.css" rel="stylesheet" type="text/css" />
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    #app {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      background-image: url(../20240118/images/header-bg.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+
+    h1 {
+      margin: 0;
+      animation: fadeInDown 1s;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url(../20240118/images/main-bg.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+
+    .content {
+      max-width: 900px;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.7);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      animation: fadeInUp 1s;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    .content img {
+      float: left;
+      margin-right: 20px;
+    }
+
+    .logo {
+      position: fixed;
+      bottom: 0;
+      right: 20px;
+    }
+
+    @keyframes fadeInDown {
+      from {right
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translate3d(0, 50%, 0);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+    .pinfo-wrap {
+        padding: 65px 0;
+    }
+    .pro-class{}
+    .pro_sort {
+        overflow: hidden;
+        width: 100%;
+    }
+    .pinfo-wrap .title3 {
+        padding: 40px 0;
+    }
+    img {
+        border: 0;
+        vertical-align: middle;
+        -ms-interpolation-mode: bicubic;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <header>
+      <img src="./images/logo.png" style="width: auto;height: 50px;float: right;">
+      <h1>蔚州贡米</h1>
+    </header>
+    <!-- <main>
+      <div class="content">
+        <img src="../20240118/images/xiaomi.png" alt="蔚州小米" style="width: auto;height: 500px;">
+        <h2>关于蔚州贡米</h2>
+        <p>蔚州贡米又名“蔚州小米、蔚州桃花米”，《蔚州志》记载，自元代开始，蔚州开始成为贡米。绵延明清两代而不衰。蔚州贡米历史不仅在当地县志中记载，还在《太原志》中有描述。山西《太原志》中记载，远在明清时，蔚县桃花小米就用来进贡皇帝，称作“贡米”，还被列为四大贡米之一。由于蔚州贡米原产地在蔚州桃花镇，所以也故名“蔚州桃花米”。</p>
+        <p>据中国农科院鉴定，蔚州桃花米含蛋白质13.1%，赖氨酸0.25%，粗脂肪4.27%，钙、磷、铁，胡萝卜素和维生素A、A1、B1、B2等含量也都很丰富，而粗纤维的含量又是几种主要粮食作物中最低的。另外，桃花米当中所含有的人体不可缺少的色氨酸、蛋氨酸比大米、白面、玉米都要高，蛋白质、脂肪含量也均高于大米和白面，为产妇、幼儿及老人的营养佳品。因此近几年来，人们常把它作为探望病人和产妇的礼品。</p>
+      </div>
+    </main> -->
+    <div class="pinfo-wrap w1200">
+      <div class="pro_sort">
+        <p>
+          <img src="./images/xiaomi4.jpg" alt="蔚州贡米">
+        </p>
+      </div>
+      <div class="pro-origin">
+        <div class="title3">
+          <h3>
+            "产地追溯"
+          </h3>
+          <p>Origin Traceability</p>
+        </div>
+        <p>
+          <img src="./images/xiaomi2.jpg" alt="产地追溯">
+        </p>
+      </div>
+
+      <div class="pro-class">
+        <div class="title3">
+          <h3>
+            "生活课堂"
+          </h3>
+          <p>Living Classroom</p>
+        </div>
+        <p>
+          <img src="./images/xiaomi3.jpg" alt="生活课堂">
+        </p>
+      </div>
+      <div class="pro-class">
+        <div class="title3">
+          <h3>
+            "产品包装"
+          </h3>
+          <p>Living Classroom</p>
+        </div>
+        <p>
+          <img src="./images/xiaomi5.jpg" alt="产品包装">
+        </p>
+      </div>
+    </div>
+    <footer>
+      <p>&copy; 2024 农味甄选.</p>
+    </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+    });
+  </script>
+</body>
+
+</html>

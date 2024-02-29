@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>赞皇金丝大枣的介绍</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    #app {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      background-image: url(../20240118/images/header-bg.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+
+    h1 {
+      margin: 0;
+      animation: fadeInDown 1s;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url(../20240118/images/main-bg.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+
+    .content {
+      max-width: 1100px;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.7);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      animation: fadeInUp 1s;
+    }
+
+    p{
+      text-indent: 35px;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    .content img {
+      float: left;
+      margin-right: 20px;
+    }
+
+    .logo {
+      position: fixed;
+      bottom: 0;
+      right: 20px;
+    }
+
+    @keyframes fadeInDown {
+      from {right
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translate3d(0, 50%, 0);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <header>
+      <h1>赞皇金丝大枣</h1>
+    </header>
+    <main>
+      <div class="content">
+        <img src="../20240118/images/dazao.jpg" alt="赞皇金丝大枣" style="width: auto;height: 500px;">
+        <h2>关于蔚州贡米</h2>
+        <p>赞皇金丝大枣又名赞皇大枣。产于河北赞皇。长圆形，果顶稍凹入皮，呈褐色，外形美观，白亮紫红，肉厚皮薄，油大味甘，晒干掰开，尺余长的蜜丝维连不断。鲜枣甜脆可口，干枣肉绵甘香，含糖量达62%-70%，每百克鲜枣含维生素300-600毫克，比同等重量的梨多140倍，比苹果多69倍。</p>
+        <p>果实形状：果实长圆形或倒卵形。平均果重17.3克，最大果重29克，大小整齐。梗洼小，中等深。环洼窄小，较深。果面广圆，顶端稍凹陷。果面平整。果皮深红褐色，光泽较差，韧性好，不裂果。果肉近白色，致密质细，汁液中等，味甜略酸，含可溶性固形物30.5％，可食率96.0％，制干率47.8％。鲜食风味中上，干制红枣果形饱满，有弹性，耐贮运，品质上等。果核纺锤形，核内不具种子。在产地，9月下旬成熟采收，果实生育期100天左右。赞皇大枣是河北省的名土特产品之一。其特点是：色鲜、皮薄、个大、核小、味甜、看外形，体硕如卵，紫红发亮，酷似一件精美的艺术珍玩；剥开后，则见肉持肥厚，质地细密、莹如冰雪；吃一口，味道甘甜，鲜美如酪；晒干掰开，尺把长的密丝纤连不断。故被人们誉为“金丝蜜”。
+        </p>
+      </div>
+    </main>
+
+    <footer>
+      <div class="logo"><img src="./images/logo.png" style="width: auto;height: 50px;"></div>
+      <p>&copy; 2024 农味甄选.</p>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+    });
+  </script>
+</body>
+
+</html>

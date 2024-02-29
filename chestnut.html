@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>京东板栗的介绍</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    #app {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      background-image: url(../20240118/images/header-bg.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+
+    h1 {
+      margin: 0;
+      animation: fadeInDown 1s;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url(../20240118/images/main-bg.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+
+    .content {
+      max-width: 1100px;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.7);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      animation: fadeInUp 1s;
+    }
+
+    p{
+      text-indent: 35px;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    .content img {
+      float: left;
+      margin-right: 20px;
+    }
+
+    .logo {
+      position: fixed;
+      bottom: 0;
+      right: 20px;
+    }
+
+    @keyframes fadeInDown {
+      from {right
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translate3d(0, 50%, 0);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <header>
+      <h1>京东板栗</h1>
+    </header>
+    <main>
+      <div class="content">
+        <img src="../20240118/images/banli.jpg" alt="京东板栗" style="width: auto;height: 500px;">
+        <h2>关于京东板栗</h2>
+        <p>京东板栗又称迁西板栗，产于河北省唐山市迁西县一带，是河北省传统特色农产品，已有2000多年的栽培历史，在很多古籍上都有记载,如《诗经》、《战国策》、《左传》、《论语》、《本草纲目》、《农政全书》。</p>
+        <p>迁西板栗外形美观，底座小;果形端正均匀，平均每公斤栗果120-140粒，大的每公斤80粒;颜色呈红褐色，鲜艳有光泽，有浅薄蜡质层，皮薄，较其它地区的板栗硬、实，故有东方"珍珠"和"紫玉"之美称，宋代诗人晁公溯曾有"风陨栗房开紫玉"之诗句；果仁呈米黄色，易剥、不粘内皮；经科学测定，迁西板栗果仁含水52%以下，蛋白质4%左右，碳水化合物38%以上，膳食纤维2%以上，维生素E40mg/kg以上，钙150mg/kg以上，铁4.5mg/kg以上，维生素C230mg/kg以上，还含有丰富的胡萝卜素及对人体有益的多种微量元素和氨基酸。主要有利于人体的指标均居全国各地板栗之首。
+        </p>
+      </div>
+    </main>
+
+    <footer>
+      <div class="logo"><img src="./images/logo.png" style="width: auto;height: 50px;"></div>
+      <p>&copy; 2024 农味甄选.</p>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+    });
+  </script>
+</body>
+
+</html>

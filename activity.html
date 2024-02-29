@@ -1,0 +1,406 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="author" content="order by dede58.com" />
+  <link href="css/css.css" rel="stylesheet" type="text/css" />
+  <link href="css/common.css" rel="stylesheet" type="text/css" />
+  <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  <script src="js/jquery.min.1.8.2.js" type="text/javascript"></script>
+  <script src="js/jquery.SuperSlide.2.1.1.js" type="text/javascript"></script>
+  <script type="text/javascript" src="js/slide.js"></script>
+  <script src="js/common_js.js" type="text/javascript"></script>
+  <script src="js/jquery.foucs.js" type="text/javascript"></script>
+  <style>
+    .news-container {
+      width: 50%;
+    }
+
+    .news {
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      padding: 10px;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: -75%;
+    }
+
+    .news h2 {
+      cursor: pointer;
+    }
+
+    .news-content {
+      display: none;
+    }
+
+    .news-content.active {
+      display: block;
+    }
+
+    .section {
+      margin-bottom: 20px;
+    }
+    .section1 {
+        margin-left:68%; 
+        margin-right:-23%; /* 水平居中 */
+        max-width: 600px; /* 设置最大宽度 */
+        padding: 20px;
+        border: 1px solid #ccc;
+    }
+    h2 {
+      font-size: 1.5em;
+      color: #333;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 0 0 10px;
+      font-size: small;
+    }
+    .signup-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .signup-button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+  <title>Foldable News</title>
+</head>
+
+<body>
+  <!--顶部样式-->
+  <div class="top_header">
+    <em class="left_img"></em>
+    <div class="header clearfix" id="header">
+      <a class="logo_img"><img src="images/logo.png" /></a>
+      <div class="header_Section">
+        <div class="shortcut">
+          <ul>
+            <li class="hd_menu_tit"><em class="login_img"></em><a href="login.html">登录</a></li>
+            <li class="hd_menu_tit"><em class="registered_img"></em><a href="register.html">注册</a></li>
+            <li class="hd_menu_tit list_name" data-addclass="hd_menu_hover"><a href="#">网站导航</a><em
+                class="navigation_img"></em>
+              <div class="hd_menu_list">
+                <span class="wire"></span>
+                <ul>
+                  <li><a href="#">常见问题</a></li>
+                  <li><a href="#">在线退换货</a></li>
+                  <li><a href="#">在线投诉</a></li>
+                  <li><a href="#">配送范围</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="nav" id="Navigation">
+          <ul class="Navigation_name">
+            <ul class="Navigation_name">
+              <li class="btli"><a href="index.html">首页</a></li>
+              <li class="btli"><a href="products.html">所有产品</a></li>
+              <li class="btli"><a href="activity.html">臻园活动</a></li>
+              <li class="btli"><a href="news.html">新闻媒体</a>
+                <ul class="droplist">
+                  <li><a href="news.html">新闻中心</a></li>
+                  <li><a href="video.html">媒体中心</a></li>
+                </ul>
+              </li>
+              <li class="btli"><a href="./about_us.html">关于我们</a></li>
+            </ul>
+        </div>
+        <script>
+          $("#Navigation").slide({
+            titCell: ".Navigation_name li"
+          });
+        </script>
+      </div>
+    </div>
+    <em class="right_img"></em>
+  </div>
+  <div class="sbanner" style="background: url(./images/acti-bg.jpg) no-repeat center center;margin-top: 0px;">
+    <div class="tips">
+      <strong>activities</strong>
+      <p>
+        <span>"臻园活动"</span>
+      </p>
+    </div>
+  </div><br>
+  <!-- 新闻 -->
+  <div class="news-container">
+    <div class="news">
+      <h1 onclick="toggleNews(1)" style="text-align: center;">
+        <div class="newslist">
+          <dl>
+              <a>
+                  <dt><img src="./images/acti1.jpg" width="247" height="174"></dt>
+                  <dd>
+                      <h3>脚步丈量乡村野径，志愿挥洒青春汗水</h3>
+                  </dd>
+                  <div class="date">
+                    <span>11-18</span>
+                    <em>2022</em>
+                </div>
+              </a>
+          </dl>
+        </div>
+    </h1>
+      <div class="news-content" id="news1"><br>
+        <br>
+        <div class="section">
+          <p style="text-indent: 2em;">
+            大学生乡村振兴服务计划是我国近年来推出的一项重要活动，其旨在鼓励和引导大学生参与乡村振兴战略，发挥大学生的青春力量。为此，农味臻园响应国家号召，推出了一年一度的“大学生走进乡村”计划。该计划包含多种形式的活动，如基层兼职、社团组织、志愿服务、社会实践和校地共建，以促进大学生的全面发展并为乡村注入青春新力量，助力乡村振兴。
+          </p>
+          <h2>活动目的:</h2>
+          <p>
+            1.促进乡村振兴：响应国家乡村振兴战略，通过大学生的专业知识和创新能力，帮助农村地区在经济、文化、教育、科技等多方面实现全面发展。<br>
+            2.知识与实践相结合：让大学生将所学知识应用于实际，增强他们的实践能力和解决实际问题的能力。<br>
+            3.培养人才：通过实践活动，培养大学生对农村和农民问题的了解，激发他们服务农村、贡献社会的热情，培养一支懂农业、爱农村、爱农民的工作队伍。<br>
+            4.传承文化：在服务活动中，大学生可以传播现代文明，同时学习和传承优秀的乡村文化，促进乡村文化振兴。<br>
+            5.社会经验积累：大学生通过实践活动，可以积累社会经验，了解国情民情，增强社会责任感和使命感。<br>
+            6.创新与创业：鼓励大学生在农村服务中寻找创业机会，将创新创意转化为实际生产力，促进农村经济发展。<br>
+            7.增强凝聚力：通过集体活动，增强大学生的团队协作能力和集体荣誉感，同时增进与当地农民的感情，促进社会和谐。
+          </p>
+          <p style="text-indent: 2em;">
+            这些活动不仅帮助大学生在实践中学习和成长，同时也为乡村的发展带来了新的活力和创意。通过这些活动，大学生不仅能够为乡村振兴作出贡献，还能在服务中实现自我价值，达到个人成长和社会服务的双重目的。通过这些活动，大学生能够深入了解乡村的实际需求，运用他们的知识和技能，为乡村振兴做出实质性贡献。
+          </p>
+        </div>
+        <div class="section">
+          <h2>活动主办单位：</h2>
+          <p>农味臻园网络技术责任有限公司：负责招募和培训志愿者，组织活动实施和总结。<br>
+            当地政府部门：负责提供活动场地，协调当地资源，确保活动顺利进行。
+          </p>
+        </div>
+        <div class="section">
+          <h2>活动时间和地点：</h2>
+          <p>2024.1.10——1.17 河北省邯郸市武安市邑城一街村北环路邑城中心小学<br>
+            2024.7.01——7.15 河北省承德市承德县<br>
+            2025.1.10——2.01 河北省秦皇岛市卢龙县
+          </p>
+        </div>
+        <div class="section">
+          <h2>活动内容</h2>
+          <p>
+            支教活动：确定支教科目，制定教学计划，准备教材和教具。大学生在乡村学校进行短期支教，包括基础课程和兴趣课程。<br>
+            文化调研：确定调研主题，制定调研问卷，安排访谈和实地考察。大学生对乡村的文化、教育、经济等方面进行调研。<br>
+            技术培训：提供农业技术、电子商务等方面的培训。确定培训课程，邀请专业讲师，准备培训材料和设备。<br>
+            环境美化：确定美化项目，准备颜料、工具等材料，制定施工计划。开展乡村美化活动，如墙绘、庭院改造等。 <br>
+            截止日期：6月15日前。
+          </p>
+        </div>
+        <div class="section">
+          <h2>活动流程:</h2>
+          <p>前期准备：明确各阶段的时间节点，制定详细的招募和培训计划。<br>
+          活动启动：确定启动仪式的时间、地点和议程，邀请相关领导和嘉宾。<br>
+          活动实施：制定详细的活动日程表，明确各项活动的负责人和志愿者。<br>
+          活动总结：安排总结会议的时间、地点，制定总结报告的模板。</p>
+        </div>
+        <div class="section">
+          <h2>注意事项:</h2>
+          <p>1.大学生在活动期间要注意安全，遵守当地法律法规，制定详细的安全指南。<br>
+            2.大学生要尊重乡村居民的习俗，与他们友好相处，制定详细的行为规范。<br>
+            3.活动期间，主办方要为大学生提供必要的后勤保障，制定详细的后勤保障计划。</p>
+        </div>
+        <div class="section">
+          <h2>活动奖励:</h2>
+          <p>1. 表彰奖励：对于在乡建设工作中作出突出贡献的大学生，政府会给予表彰奖励。例如，优先将符合条件的大学生纳入村级后备力量进行培养和使用，支持乡村、村设立荣誉墙，对家乡建设贡献大的大学生按规定予以项目支持。<br>
+            2. 优秀组织奖：在大学生志愿服务乡村振兴计划中，对于表现突出的个人和集体，会颁发“优秀志愿者”和“优秀组织奖”。这些奖项不仅是对个人和集体努力的认可，也是对他们在乡村振兴中作用的肯定。<br>
+            3.
+            项目资助和奖金：在仲明薪火计划中，大学生团队可以通过参与公益微创投大赛获得资金支持。这些项目在经过评审后，优胜者可以获得不同额度的奖金，以及项目资助。这种资助不仅包括资金，还包括项目评审、优化、管理、能力建设、资源联动等专业服务。<br>
+            4. 综合支持：除了直接的物质奖励外，还包括对大学生乡贤的全方位支持。例如，提供培训、政策咨询、风险评估、项目对接、融资贷款、市场开发、法律援助等服务，以帮助他们更好地投身于乡村振兴事业中。
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="news">
+      <h1 onclick="toggleNews(2)" style="text-align: center;">
+        <div class="newslist">
+          <dl>
+              <a>
+                  <dt><img src="./images/acti2.jpg" width="247" height="174"></dt>
+                  <dd>
+                      <h3>徽村探寻，寻找家园之美，感受乡愁情怀。</h3>
+                  </dd>
+                  <div class="date">
+                    <span>11-18</span>
+                    <em>2022</em>
+                </div>
+              </a>
+          </dl>
+        </div>
+      </h1>
+      <div class="news-content" id="news2">
+        <br>
+        <div class="section">
+          <h2>目的地介绍：</h2>
+          <p style="text-indent: 2em;">
+            西递、宏村为世界文化遗产，也是国家AAAAA级旅游景区。西递、宏村位于安徽省黄山市黟县，是安徽南部民居中比较有代表性的两座古村落，以世外桃源般的田园风光、保存完好的村落形态、工艺精湛的徽派民居和丰富多彩的历史文化内涵而闻名天下，被誉为"画中的村庄"。西递、宏村其"布局之工，结构之巧，装饰之美，营造之精，文化内涵之深"，为国内古民居建筑群所罕见，是徽派民居中的一颗明珠。
+          </p>
+        </div>
+        <div class="section">
+          <h2>行程安排：</h2>
+          <p>第一天：<br>
+            早上，我们在指定地点集合，然后乘车前往宏村。途中，我们可以欣赏沿途的风景，并且可以预订一些路边小吃品尝当地特色美食。<br>
+            中午时分，我们可以在附近的餐馆品尝正宗的当地美食午餐，感受当地的饮食文化。<br>
+            下午，我们将游览宏村南湖景区，欣赏那里独特的明清建筑、清澈的南湖水景以及宁静的田园风光。<br>
+            傍晚，我们将入住宏村的农家客栈，体验当地民宿生活，感受与众不同的乡村风情。<br>
+          </p>
+          <p>
+            第二天：<br>
+            早餐后，我们将前往宏村古徽州文化展示馆，深入了解徽派建筑、徽商文化和徽菜美食，领略古徽州的独特魅力。接着，我们可以在宏村品尝正宗的徽菜午餐，品味浓厚的地方风味。<br>
+            下午，我们将乘车前往西递古村落，游览西递古村，欣赏精美的徽派建筑和宁静的田园风光，感受时光流转中的古朴与宁静。 <br>
+            傍晚，我们返回宏村，在农家客栈自由活动或参加当地举办的农家活动，亲身体验农村生活的美好。<br>
+          </p>
+          <p>第三天：<br>
+            早餐后，我们将游览宏村月沼和南湖，感受清晨的宁静和美丽，享受宁静的晨光。 <br>
+            上午，我们可以参与农耕体验活动，亲身体验农村劳作，感受传统农耕文化的魅力。 <br>
+            中午，我们将享用农家自制午餐，品尝新鲜的农家特色美食，感受纯朴的乡间生活。 <br>
+            下午，我们可以合影留念，结束愉快的乡村之行，乘车返回出发地点，带着满满的美好回忆和难忘的体验，结束这次愉快的旅程。
+          </p>
+        </div>
+        <div class="section">
+          <h2>住宿安排</h2>
+          <p style="text-indent: 2em;">
+            在此次旅行中，我们选择当地的农家客栈作为住宿场所。这些农家客栈由当地居民经营，提供亲切的服务和家庭般的氛围。客房设施简洁而舒适，配备基本的卫生间、床铺、衣柜等设施。房间内保持整洁，床上用品干净，并提供必要的生活用品和洗漱用品。
+          </p>
+        </div>
+        <div class="section">
+          <h2>服务安排</h2>
+          <p>提供专业导游，介绍宏村、西递的历史、文化和民俗。<br>
+            安排舒适的交通工具，确保游客的安全和舒适。<br>
+            提供优质的农家客栈住宿和当地特色餐饮服务。<br>
+            安排农耕体验、徽派建筑参观等特色活动。</p>
+        </div>
+        <div class="section">
+          <h2>注意事项</h2>
+          <p>注意节约用水和保护环境，爱护当地古村落的文物和环境。</p>
+          <p>遵守当地村规民约，尊重当地居民的风俗习惯和信仰。</p>
+          <p>注意安全，听从导游和工作人员的安排和指示。</p>
+          <p>这个行程安排可能会根据实际情况进行调整，希望能够帮助您规划一次愉快的宏村、西递古村落之行。祝旅途愉快</p>
+        </div>
+      </div>
+    </div>
+    <div class="news">
+      <h1 onclick="toggleNews(3)" style="text-align: center;">
+        <div class="newslist">
+          <dl>
+              <a>
+                  <dt><img src="./images/acti3.jpg" width="247" height="174"></dt>
+                  <dd>
+                      <h3>翠绿回馈，共享未来，一起创造美好明天</h3>
+                  </dd>
+                  <div class="date">
+                    <span>11-18</span>
+                    <em>2022</em>
+                </div>
+              </a>
+          </dl>
+        </div>
+      </h1>
+      <div class="news-content" id="news3"><br>
+        <div class="section">
+          <p style="text-indent: 2em;">
+            为倡导环保理念和可持续发展观念，通过回收礼品袋减少塑料垃圾的产生，促进环境保护事业的发展。农味臻园举办一年一度的“绿色回馈 共享未来”活动。通过本次活动，农味臻园将提高顾客的环保意识和责任感，树立企业良好的社会形象和口碑，同时也为可持续发展事业贡献一份力量。
+          </p>
+          <h2>活动宗旨：</h2>
+          <p style="text-indent: 2em;">
+            本次活动旨在通过回收农味臻园的礼品袋，倡导环保理念和可持续发展观念，减少塑料垃圾的产生，促进环境保护事业的发展。
+          </p>
+        </div>
+        <div class="section">
+          <h2>活动时间和地点:</h2>
+          <p>活动时间：2025年3月15日至4月15日<br>
+            活动地点：农味臻园各个服务点           
+          </p>
+        </div>
+        <div class="section">
+          <h2>活动流程</h2>
+          <h3>礼品袋回收（3月15日至4月15日）</h3>
+          <p style="text-indent: 2em;">
+            在农味臻园各个服务点设立礼品袋回收箱，大家可以通过直接送到服务点或通过农味臻园合作的物流公司邮寄到服务点进行参加（邮费由农味臻园承担）。
+          </p>
+        </div>
+        <div class="section">
+          <h2>邮寄回收</h2>
+          <p style="text-indent: 2em;">对于无法前往农味臻园服务点的市民，可以选择将礼品袋邮寄至指定地址。详细的邮寄信息将后期官网中发布,您也可以通过农味臻园官网或者农味臻园APP的“在线客服”，为您提供及时的回复。</p>
+        </div>
+        <div class="section">
+          <h2>注意事项</h2>
+          <p style="text-indent: 2em;">本次活动遵守环保法律法规，不得在活动中使用任何有害物质，不得损害任何生态系统和自然环境，组织者将全程监督活动的合规性和安全性。</p>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="section1">
+      <h1>报名方式</h1>
+      <p>1.请在2024年6月15日前将报名表发至邮箱2838408965@qq.com<br>
+        2.在此处直接进行报名<br>
+        <a href="information_collect.html" class="signup-button">点击此处即可报名上述活动</a>          
+      </p>
+    </div>
+  </div>
+  <div class="page">
+    <label class="label1">
+      <label class="label2">
+        <div class="pagination">
+          <div class="pagination"></div>
+        </div>
+      </label>
+    </label>
+  </div>
+  <!--底部样式-->
+  <div class="footer">
+    <div class="footer_img_bg"></div>
+    <div class="footerbox">
+      <div class="footer_info">
+        <div class="footer_left">
+          <a href="#"><img src="images/logo.png" /></a>
+          <p class="erwm">
+            <img src="images/erweim.png" width="80px" height="80px" />
+            <img src="images/erweim.png" width="80px" height="80px" />
+            <p>
+        </div>
+        <div class="helper_right clearfix">
+          <dl>
+            <dt><em class="guide"></em>新手指南</dt>
+            <dd><a href="register.html">注册新用户</a></dd>
+            <dd><a href="login.html">登录</a></dd>
+            <dd><a href="#">找回密码</a></dd>
+          </dl>
+          <dl>
+            <dt><em class="h_about"></em>关于我们</dt>
+            <dd><a href="#">关于我们</a></dd>
+            <dd><a href="#">政策服务</a></dd>
+            <dd><a href="#">常见问题</a></dd>
+          </dl>
+          <dl>
+            <dt><em class="h_conact"></em>联系我们</dt>
+            <dd><a href="#">联系我们</a></dd>
+            <dd><a href="#">在线客服</a></dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+    <div class="Copyright ">
+      @2024 农味甄园
+
+    </div>
+  </div>
+  <script>
+    function toggleNews(id) {
+      var newsContent = document.getElementById('news' + id);
+      newsContent.classList.toggle('active');
+    }
+  </script>
+</body>
+
+</html>
