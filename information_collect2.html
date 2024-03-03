@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>填写个人信息</title>
+	<style>
+		body {
+			background-color: #F5F5F5;
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			line-height: 1.5;
+			margin: 0;
+			padding: 0;
+		}
+		h1 {
+			color: #333;
+			font-size: 28px;
+			font-weight: bold;
+			margin: 20px 0;
+			text-align: center;
+		}
+		form {
+			background-color: #FFF;
+			border: 1px solid #DDD;
+			margin: 0 auto;
+			max-width: 600px;
+			padding: 20px;
+		}
+		label {
+			display: block;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+		.required {
+			color: red;
+		}
+		input[type="text"], select {
+			border: 1px solid #CCC;
+			border-radius: 4px;
+			box-sizing: border-box;
+			font-size: 16px;
+			margin-bottom: 20px;
+			padding: 10px;
+			width: 100%;
+		}
+		button {
+			background-color: #00A0E9;
+			border: none;
+			border-radius: 4px;
+			color: #FFF;
+			cursor: pointer;
+			font-size: 16px;
+			padding: 10px 20px;
+		}
+		button:hover {
+			background-color: #0084C2;
+		}
+
+		/* “感谢您的参与”界面样式 */
+		#thankyou {
+			background-color: #FFF;
+			border: 1px solid #DDD;
+			display: none;
+			margin: 0 auto;
+			max-width: 600px;
+			padding: 20px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<h1>个人信息填写</h1>
+	<form>
+		<label for="name">姓名<span class="required">*</span>：</label>
+		<input type="text" id="name" name="name" required>
+
+		<label for="gender">性别<span class="required">*</span>：</label>
+		<select id="gender" name="gender" required>
+			<option value="">请选择</option>
+			<option value="male">男</option>
+			<option value="female">女</option>
+		</select>
+
+		<label for="age">年龄：</label>
+		<input type="text" id="age" name="age">
+
+		<label for="email">电子邮件：</label>
+		<input type="text" id="email" name="email">
+
+		<label for="phone">电话号码<span class="required">*</span>：</label>
+		<input type="text" id="phone" name="phone" required>
+
+		<button id="submit-button" type="submit">提交</button>
+	</form>
+
+	<!-- “感谢您的参与”界面 -->
+	<div id="thankyou">
+		<h2>感谢您的参与！</h2>
+		<p>我们已经收到您的信息。</p>
+		<button id="close-button">关闭</button>
+	</div>
+
+	<script>
+		var form = document.querySelector('form');
+		var submitButton = document.querySelector('#submit-button');
+		var thankyou = document.querySelector('#thankyou');
+		var closeButton = document.querySelector('#close-button');
+
+		// 提交按钮被点击时触发的函数
+		function onSubmit(event) {
+			event.preventDefault(); // 阻止默认的表单提交行为
+
+			// 在这里编写提交表单的代码，可以通过 AJAX 或其他方式将表单数据发送到服务器
+
+			// 显示“感谢您的参与”界面，并重置表单
+			form.reset();
+			form.style.display = 'none';
+			thankyou.style.display = 'block';
+		}
+
+		// 关闭按钮被点击时触发的函数
+		function onClose() {
+			// 隐藏“感谢您的参与”界面，并显示表单
+			thankyou.style.display = 'none';
+			form.style.display = 'block';
+		}
+
+		// 给提交按钮和关闭按钮添加事件监听函数
+		submitButton.addEventListener('click', onSubmit);
+		closeButton.addEventListener('click', onClose);
+	</script>
+</body>
+</html>
